@@ -8,4 +8,4 @@ Cant_Muñeca = float(input("Ingrese la cantidad de Muñecas: "))
 Peso_Payaso = Cant_Payaso  *112
 Peso_Muñeca = Cant_Muñeca  *112
 Peso_Total = Peso_Payaso + Peso_Muñeca
-print("----> El peso total del paquete que sera enviado sera de ",Peso_Total, " gramos")
+print('----> El peso total del paquete que sera enviado sera de {:.3f}  gramos'.format(Peso_Total))

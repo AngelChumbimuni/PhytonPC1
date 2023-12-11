@@ -7,6 +7,12 @@ dejar como propina.
 
 """
 Consumo = float(input("¿Cuánto consumiste?(En soles):"))
-Porc_Propina= float(input("¿Qué porcentaje de propina quieres dar?:"))
-Monto_Propina = Consumo*Porc_Propina
+Porc_Propina_str = input("¿Qué porcentaje de propina quieres dar?:")
+if Porc_Propina_str.endswith('%'):
+    Porc_Propina = float(Porc_Propina_str.rstrip('%'))
+    Monto_Propina = Consumo*Porc_Propina/100
+else:
+    Porc_Propina = float(Porc_Propina_str)
+    Monto_Propina = Consumo * Porc_Propina
+    
 print("---> La propina que debes dar es de ", Monto_Propina,"soles")
